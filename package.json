@@ -1,0 +1,22 @@
+{
+    "name": "workspace",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "html-validate *.html",
+        "build": "npm run build:sass && npm run build:minify && npm run test",
+        "build:sass": "sass --style=compressed --no-source-map sass:css",
+        "build:minify": "postcss css/*.css --use-autoprefixer -d css"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "autoprefixer": "^10.2.4",
+        "html-validate": "^7.1.2",
+        "postcss": "^8.2.6",
+        "postcss-cli": "^8.3.1",
+        "sass": "^1.54.1"
+    }
+}
